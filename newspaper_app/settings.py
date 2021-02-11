@@ -59,7 +59,7 @@ ROOT_URLCONF = 'newspaper_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,3 +127,8 @@ STATIC_URL = '/static/'
 # using custom user model
 
 AUTH_USER_MODEL = 'accounts.CustomUser'
+
+# redirect after successfull login and logout
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

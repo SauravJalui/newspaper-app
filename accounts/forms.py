@@ -6,10 +6,10 @@ class CustomUserCreationForm(UserCreationForm):
     '''This code is to extend the existing UserCreationForm to add a new field'''
     class Meta(UserCreationForm):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields + ('age',)
+        fields = ('username', 'email', 'age')
     
 class CustomUserChangeForm(UserChangeForm):
     '''This code is to extend the existing UserChangeForm'''
     class Meta:
         model = CustomUser
-        fields = UserChangeForm.Meta.fields
+        fields = ('username', 'email', 'age')
