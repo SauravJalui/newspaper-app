@@ -41,7 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #local
     'accounts.apps.AccountsConfig',
+    'pages.apps.PagesConfig',
+    #3rd party
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +136,7 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
+#adding crispy pack template to use bootstrap4
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
